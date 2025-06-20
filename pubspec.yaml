@@ -1,0 +1,43 @@
+name: rasa_nusantara
+description: "Aplikasi eksplorasi kuliner tradisional Indonesia."
+
+# Ini supaya tidak dipublish ke pub.dev (tetap lokal)
+publish_to: 'none'
+
+# Versi aplikasi
+version: 1.0.0+1
+
+# Versi SDK Dart yang digunakan
+environment:
+  sdk: ^3.7.2
+
+# ===== DEPENDENSI UTAMA APLIKASI =====
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^0.13.6              # Untuk ambil data dari API Unsplash
+  cupertino_icons: ^1.0.8    # Icon-style untuk iOS
+
+# ===== DEV DEPENDENCIES (HANYA SAAT PENGEMBANGAN) =====
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0              # Untuk analisa kode lebih baik
+  flutter_launcher_icons: ^0.13.1    # Untuk ganti icon aplikasi
+
+# ===== KONFIGURASI ICON APLIKASI =====
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"      # Path ke icon yang akan digunakan
+  remove_alpha_ios: true             # Menghilangkan alpha channel pada iOS
+
+# ===== KONFIGURASI FLUTTER LAINNYA =====
+flutter:
+  uses-material-design: true         # Aktifkan material design
+
+  assets:                            # Daftar file asset yang digunakan
+    - assets/images/intro.png
+    - assets/icon.png
